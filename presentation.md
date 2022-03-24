@@ -15,7 +15,7 @@ _Emphasis_, __Strong__
 
 > Quote
 
-# Scala 3 syntax highlighting
+# Scala 3 code
 
 ```scala
 val a = if true then 0 else 42
