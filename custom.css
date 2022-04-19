@@ -68,6 +68,12 @@ code {
     background-color: #a626a4;
 }
 
+.reveal ul, .reveal ol {
+    display: block;
+    margin: 1em 0em;
+    padding-left: 1.5em;
+}
+
 .reveal .slides section .fragment {
     opacity: 0.25;
     visibility: visible;
