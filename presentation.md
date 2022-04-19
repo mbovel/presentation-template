@@ -13,8 +13,6 @@ author: "[Matt Bovel](mailto:matthieu@bovel.net) @[LAMP](https://www.epfl.ch/lab
 
 _Emphasis_, __Strong__
 
-> Quote
-
 # Syntax highlighting
 
 ```scala
