@@ -1,0 +1,78 @@
+:root {
+    /* Configurable variables: https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss */
+    /* --r-main-font: Helvetica; */
+    --r-main-font-size: 33px;
+    --r-link-color: #a626a4;
+    --r-link-color-hover: #f113ed;
+}
+
+.reveal {
+    font-weight: 300;
+    color: #444;
+}
+
+.reveal .slides {
+    text-align:left;
+}
+
+.reveal pre {
+    box-shadow: none;
+    margin: 0;
+}
+
+.reveal pre {
+    font-size: 0.8em;
+}
+
+pre code.hljs {
+    border-radius: 6px;
+}
+
+code {
+    background-color: #fafafa;
+}
+
+:not(pre) code {
+    background-color: #fafafa;
+    display: inline-block;
+    padding: 0.1em 0.3em;
+    border-radius: 6px;
+}
+
+.katex {
+    font-size: 1em;
+}
+
+.reveal h1 {
+    margin-bottom: 0.5em;
+}
+
+.reveal h1::after {
+    content: "";
+    display: block;
+    width: 3em;
+    height: 0.3em;
+    background-color: #a626a4;
+}
+
+
+.reveal h2 {
+    margin-bottom: 1em;
+}
+
+.reveal h2::after {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 0.2em;
+    background-color: #a626a4;
+}
+
+.reveal .slides section .fragment {
+    opacity: 0.25;
+    visibility: visible;
+}
+
+.reveal ::selection {
+    background-color: hsla(301, 63%, 40%, 1);
+}

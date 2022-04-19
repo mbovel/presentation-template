@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Matt Bovel">
-  <meta name="dcterms.date" content="2022-03-24">
-  <title>Stuff</title>
+  <meta name="author" content="Matt Bovel @LAMP/LARA, EPFL">
+  <meta name="dcterms.date" content="2022-04-19">
+  <title>Towards nicer slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -22,7 +22,7 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
    var mathElements = document.getElementsByClassName("math");
@@ -39,20 +39,21 @@
   }}});
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-light.min.css">
+  <link rel="stylesheet" href="custom.css" />
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Stuff</h1>
-  <p class="author">Matt Bovel</p>
-  <p class="date">March 24, 2022</p>
+  <h1 class="title">Towards nicer slides</h1>
+  <p class="author"><a href="mailto:matthieu@bovel.net">Matt Bovel</a> @<a href="https://www.epfl.ch/labs/lamp/">LAMP</a>/<a href="https://lara.epfl.ch/w/">LARA</a>, <a href="https://www.epfl.ch/fr/">EPFL</a></p>
+  <p class="date">April 19, 2022</p>
 </section>
 
-<section id="markdown" class="slide level1">
-<h1>Markdown</h1>
+<section id="markdown" class="slide level2">
+<h2>Markdown</h2>
 <ul>
 <li>Item 1</li>
 <li>Item 2</li>
@@ -66,13 +67,35 @@
 <p>Quote</p>
 </blockquote>
 </section>
-<section id="scala-3-code" class="slide level1">
-<h1>Scala 3 code</h1>
-<pre class="scala"><code>val a = if true then 0 else 42</code></pre>
+<section id="syntax-highlighting" class="slide level2">
+<h2>Syntax highlighting</h2>
+<pre class="scala"><code>val a = if true then 0 else 42
+transparent inline def hello() = ???
+case class Foo(val bar: Int)
+extension (o: Object) def baz() = ???</code></pre>
+<p>(Supports Scala 3 syntax!)</p>
 </section>
-<section id="latex" class="slide level1">
-<h1>LaTeX</h1>
+<section id="latex" class="slide level2">
+<h2>LaTeX</h2>
 <p><span class="math display">\phi = \frac{a}{b}</span></p>
+</section>
+<section id="slide-break" class="slide level2">
+<h2>Slide break</h2>
+<p>Can break to the next slide without a new heading using a Markdown section beak:</p>
+<pre><code>---</code></pre>
+</section>
+<section class="slide level2">
+
+<p>Second part.</p>
+</section>
+<section id="fragments" class="slide level2">
+<h2>Fragments</h2>
+<div class="fragment">
+<p>First thing</p>
+</div>
+<div class="fragment">
+<p>Second thing</p>
+</div>
 </section>
     </div>
   </div>
@@ -212,7 +235,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -228,6 +251,16 @@
         // devices. It is advisable to set this to a lower number than
         // viewDistance in order to save resources.
         mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1200,
+
+        height: 675,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.14,
 
         // reveal.js plugins
         plugins: [
