@@ -17,11 +17,21 @@
 
 .reveal pre {
     box-shadow: none;
-    margin: 0;
+    line-height: 1.5;
+}
+
+.reveal small,
+.reveal small * {
+    vertical-align: inherit;
 }
 
 .reveal pre {
     font-size: 0.8em;
+    width: auto;
+}
+
+.reveal ul ul {
+    margin: 0;
 }
 
 pre code.hljs {
@@ -68,6 +78,18 @@ code {
     background-color: #a626a4;
 }
 
+.reveal h3 {
+    margin-bottom: 1em;
+}
+
+.reveal h3::after {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 0.15em;
+    background-color: #a626a4;
+}
+
 .reveal ul, .reveal ol {
     display: block;
     margin: 1em 0em;
@@ -81,4 +103,8 @@ code {
 
 .reveal ::selection {
     background-color: hsla(301, 63%, 40%, 1);
+}
+
+#TOC ul {
+    columns: 2;
 }
