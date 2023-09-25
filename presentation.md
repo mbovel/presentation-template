@@ -42,14 +42,16 @@ Second part.
 
 # Columns
 
-::: {.columns}
+::: columns
 
-:::: {.column}
+:::: column
 Column 1 Content
 ::::
-:::: {.column}
+
+:::: column
 Column 2 Content
 ::::
+
 :::
 
 # Fragments
