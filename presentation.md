@@ -56,15 +56,14 @@ Column 2 Content
 
 # Fragments
 
-
-<div class="fragment">
+::: fragment
 
 First thing
 
-</div>
+:::
 
-<div class="fragment">
+::: fragment
 
 Second thing
 
-</div>
+:::
