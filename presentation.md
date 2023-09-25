@@ -40,6 +40,18 @@ Can break to the next slide without a new heading using a Markdown section beak:
 
 Second part.
 
+# Columns
+
+::: {.columns}
+
+:::: {.column}
+Column 1 Content
+::::
+:::: {.column}
+Column 2 Content
+::::
+:::
+
 # Fragments
 
 
