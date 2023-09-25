@@ -101,6 +101,10 @@ code {
     visibility: visible;
 }
 
+.reveal .slides section .fragment.visible {
+    opacity: 1;
+}
+
 .reveal ::selection {
     background-color: hsla(301, 63%, 40%, 1);
 }
