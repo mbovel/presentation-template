@@ -1,8 +1,10 @@
 :root {
     /* Configurable variables: https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss */
     /* --r-main-font: Helvetica; */
+    --primary-color: #a626a4;
+    --selection-color: hsla(301, 63%, 40%, 1);
     --r-main-font-size: 33px;
-    --r-link-color: #a626a4;
+    --r-link-color: var(--primary-color);
     --r-link-color-hover: #f113ed;
 }
 
@@ -62,7 +64,7 @@ code {
     display: block;
     width: 3em;
     height: 0.3em;
-    background-color: #a626a4;
+    background-color: var(--primary-color);
 }
 
 
@@ -75,7 +77,7 @@ code {
     display: block;
     width: 2em;
     height: 0.2em;
-    background-color: #a626a4;
+    background-color: var(--primary-color);
 }
 
 .reveal h3 {
@@ -87,7 +89,7 @@ code {
     display: block;
     width: 1.5em;
     height: 0.15em;
-    background-color: #a626a4;
+    background-color: var(--primary-color);
 }
 
 .reveal ul, .reveal ol {
@@ -106,7 +108,7 @@ code {
 }
 
 .reveal ::selection {
-    background-color: hsla(301, 63%, 40%, 1);
+    background-color: var(--selection-color);
 }
 
 #TOC ul {
