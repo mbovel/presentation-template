@@ -24,7 +24,8 @@ all: presentation.html presentation.pdf
 		-V header-includes='<link rel="stylesheet" href="custom.css" />' \
 		-V include-after='<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/scala.min.js"></script><script>hljs.highlightAll();</script>' \
 		-V history="true" \
-		--shift-heading-level-by=1
+		-V navigationMode="linear" \
+		--slide-level=2 \
 
 %.pdf: %.html
 	docker run --rm --volume "`pwd`:/slides" --workdir="/slides" --user `id -u`:`id -g` astefanutti/decktape \
