@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Matt Bovel @LAMP/LARA, EPFL">
-  <meta name="dcterms.date" content="2022-06-28">
+  <meta name="dcterms.date" content="2024-06-20">
   <title>Towards nicer slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -17,29 +17,36 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-light.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
   <link rel="stylesheet" href="custom.css" />
 </head>
 <body>
@@ -48,12 +55,15 @@
 
 <section id="title-slide">
   <h1 class="title">Towards nicer slides</h1>
-  <p class="author"><a href="mailto:matthieu@bovel.net">Matt Bovel</a> @<a href="https://www.epfl.ch/labs/lamp/">LAMP</a>/<a href="https://lara.epfl.ch/w/">LARA</a>, <a href="https://www.epfl.ch/fr/">EPFL</a></p>
-  <p class="date">June 28, 2022</p>
+  <p class="author"><a href="mailto:matthieu@bovel.net">Matt Bovel</a>
+@<a href="https://www.epfl.ch/labs/lamp/">LAMP</a>/<a
+href="https://lara.epfl.ch/w/">LARA</a>, <a
+href="https://www.epfl.ch/fr/">EPFL</a></p>
+  <p class="date">June 20, 2024</p>
 </section>
 
-<section id="markdown" class="slide level2">
-<h2>Markdown</h2>
+<section id="markdown" class="title-slide slide level1">
+<h1>Markdown</h1>
 <ul>
 <li>Item 1</li>
 <li>Item 2</li>
@@ -64,35 +74,61 @@
 </ol>
 <p><em>Emphasis</em>, <strong>Strong</strong></p>
 </section>
-<section id="syntax-highlighting" class="slide level2">
-<h2>Syntax highlighting</h2>
+
+<section id="syntax-highlighting" class="title-slide slide level1">
+<h1>Syntax highlighting</h1>
 <pre class="scala"><code>val a = if true then 0 else 42
 transparent inline def hello() = ???
 case class Foo(val bar: Int)
 extension (o: Object) def baz() = ???</code></pre>
 <p>(Supports Scala 3 syntax!)</p>
 </section>
-<section id="latex" class="slide level2">
-<h2>LaTeX</h2>
+
+<section id="latex" class="title-slide slide level1">
+<h1>LaTeX</h1>
 <p><span class="math display">\phi = \frac{a}{b}</span></p>
 </section>
-<section id="slide-break" class="slide level2">
-<h2>Slide break</h2>
-<p>Can break to the next slide without a new heading using a Markdown section beak:</p>
+
+<section>
+<section id="slide-break" class="title-slide slide level1">
+<h1>Slide break</h1>
+<p>Can break to the next slide without a new heading using a Markdown
+section beak:</p>
 <pre><code>---</code></pre>
 </section>
 <section class="slide level2">
 
 <p>Second part.</p>
+</section></section>
+<section id="columns" class="title-slide slide level1">
+<h1>Columns</h1>
+<div class="columns">
+<div class="column">
+<p>Column 1 Content</p>
+</div><div class="column">
+<p>Column 2 Content</p>
+</div>
+</div>
 </section>
-<section id="fragments" class="slide level2">
-<h2>Fragments</h2>
+
+<section id="fragments" class="title-slide slide level1">
+<h1>Fragments</h1>
 <div class="fragment">
 <p>First thing</p>
 </div>
 <div class="fragment">
 <p>Second thing</p>
 </div>
+</section>
+
+<section id="speaker-notes" class="title-slide slide level1">
+<h1>Speaker notes</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<aside class="notes">
+<p>This is a note.</p>
+<p>To see notes, press the s key, which will start a pop-up window If it
+does not work, check if your browser stopped the pop-up</p>
+</aside>
 </section>
     </div>
   </div>
@@ -168,7 +204,7 @@ extension (o: Object) def baz() = ???</code></pre>
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'default',
+        navigationMode: 'linear',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
@@ -267,6 +303,6 @@ extension (o: Object) def baz() = ???</code></pre>
         ]
       });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/scala.min.js"></script><script>hljs.highlightAll();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/scala.min.js"></script><script>hljs.highlightAll();</script>
     </body>
 </html>

@@ -67,3 +67,16 @@ First thing
 Second thing
 
 :::
+
+# Speaker notes
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+::: notes
+
+This is a note.
+
+To see notes, press the s key, which will start a pop-up window
+If it does not work, check if your browser stopped the pop-up
+
+:::
