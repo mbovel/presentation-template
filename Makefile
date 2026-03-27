@@ -16,7 +16,7 @@ all: presentation.html presentation.pdf
 		`# Use "atom-one-dark.min.css" for dark mode. Other reasonnable light themes include xcode.css and vs.css.` \
 		-V header-includes='<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">' \
 		`# Reveal.js options can be set form pandoc: https://github.com/jgm/pandoc/blob/master/data/templates/default.revealjs#L95` \
-		`# -V center="false"` \
+		-V center="false" \
 		-V width="1200" \
 		-V height="675" \
 		-V margin="0.14" \

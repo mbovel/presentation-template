@@ -17,6 +17,13 @@
     text-align:left;
 }
 
+#title-slide {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
 .reveal pre {
     box-shadow: none;
     line-height: 1.5;
