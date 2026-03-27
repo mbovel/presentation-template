@@ -3,7 +3,7 @@ title: Towards nicer slides
 author: "[Matt Bovel](mailto:matthieu@bovel.net) @[LAMP](https://www.epfl.ch/labs/lamp/)/[LARA](https://lara.epfl.ch/w/), [EPFL](https://www.epfl.ch/fr/)"
 ---
 
-# Markdown
+## Markdown
 
 - Item 1
 - Item 2
@@ -13,7 +13,7 @@ author: "[Matt Bovel](mailto:matthieu@bovel.net) @[LAMP](https://www.epfl.ch/lab
 
 _Emphasis_, __Strong__
 
-# Syntax highlighting
+## Syntax highlighting
 
 ```scala
 val a = if true then 0 else 42
@@ -24,11 +24,11 @@ extension (o: Object) def baz() = ???
 
 (Supports Scala 3 syntax!)
 
-# LaTeX
+## LaTeX
 
 $$\phi = \frac{a}{b}$$
 
-# Slide break
+## Slide break
 
 Can break to the next slide without a new heading using a Markdown section beak:
 
@@ -40,7 +40,7 @@ Can break to the next slide without a new heading using a Markdown section beak:
 
 Second part.
 
-# Columns
+## Columns
 
 ::: columns
 
@@ -54,7 +54,7 @@ Column 2 Content
 
 :::
 
-# Fragments
+## Fragments
 
 ::: fragment
 
@@ -68,7 +68,7 @@ Second thing
 
 :::
 
-# Speaker notes
+## Speaker notes
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

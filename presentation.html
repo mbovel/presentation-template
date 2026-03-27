@@ -4,32 +4,38 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Matt Bovel @LAMP/LARA, EPFL">
-  <meta name="dcterms.date" content="2024-06-20">
+  <meta name="dcterms.date" content="2026-03-27">
   <title>Towards nicer slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.1/dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reveal.css">
   <style>
     .reveal .sourceCode {  /* see #7635 */
       overflow: visible;
     }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.1/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/theme/white.css" id="theme">
   <script defer=""
-  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -45,7 +51,7 @@
 }}});
   </script>
   <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
   <link rel="stylesheet" href="custom.css" />
 </head>
@@ -59,11 +65,11 @@
 @<a href="https://www.epfl.ch/labs/lamp/">LAMP</a>/<a
 href="https://lara.epfl.ch/w/">LARA</a>, <a
 href="https://www.epfl.ch/fr/">EPFL</a></p>
-  <p class="date">June 20, 2024</p>
+  <p class="date">March 27, 2026</p>
 </section>
 
-<section id="markdown" class="title-slide slide level1">
-<h1>Markdown</h1>
+<section id="markdown" class="slide level2">
+<h2>Markdown</h2>
 <ul>
 <li>Item 1</li>
 <li>Item 2</li>
@@ -74,24 +80,20 @@ href="https://www.epfl.ch/fr/">EPFL</a></p>
 </ol>
 <p><em>Emphasis</em>, <strong>Strong</strong></p>
 </section>
-
-<section id="syntax-highlighting" class="title-slide slide level1">
-<h1>Syntax highlighting</h1>
+<section id="syntax-highlighting" class="slide level2">
+<h2>Syntax highlighting</h2>
 <pre class="scala"><code>val a = if true then 0 else 42
 transparent inline def hello() = ???
 case class Foo(val bar: Int)
 extension (o: Object) def baz() = ???</code></pre>
 <p>(Supports Scala 3 syntax!)</p>
 </section>
-
-<section id="latex" class="title-slide slide level1">
-<h1>LaTeX</h1>
+<section id="latex" class="slide level2">
+<h2>LaTeX</h2>
 <p><span class="math display">\phi = \frac{a}{b}</span></p>
 </section>
-
-<section>
-<section id="slide-break" class="title-slide slide level1">
-<h1>Slide break</h1>
+<section id="slide-break" class="slide level2">
+<h2>Slide break</h2>
 <p>Can break to the next slide without a new heading using a Markdown
 section beak:</p>
 <pre><code>---</code></pre>
@@ -99,9 +101,9 @@ section beak:</p>
 <section class="slide level2">
 
 <p>Second part.</p>
-</section></section>
-<section id="columns" class="title-slide slide level1">
-<h1>Columns</h1>
+</section>
+<section id="columns" class="slide level2">
+<h2>Columns</h2>
 <div class="columns">
 <div class="column">
 <p>Column 1 Content</p>
@@ -110,9 +112,8 @@ section beak:</p>
 </div>
 </div>
 </section>
-
-<section id="fragments" class="title-slide slide level1">
-<h1>Fragments</h1>
+<section id="fragments" class="slide level2">
+<h2>Fragments</h2>
 <div class="fragment">
 <p>First thing</p>
 </div>
@@ -120,9 +121,8 @@ section beak:</p>
 <p>Second thing</p>
 </div>
 </section>
-
-<section id="speaker-notes" class="title-slide slide level1">
-<h1>Speaker notes</h1>
+<section id="speaker-notes" class="slide level2">
+<h2>Speaker notes</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 <aside class="notes">
 <p>This is a note.</p>
@@ -133,12 +133,12 @@ does not work, check if your browser stopped the pop-up</p>
     </div>
   </div>
 
-  <script src="https://unpkg.com/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/dist/reveal.js"></script>
 
   <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@4.6.1/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.6.1/plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.6.1/plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/zoom/zoom.js"></script>
 
   <script>
 
@@ -192,7 +192,7 @@ does not work, check if your browser stopped the pop-up</p>
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
