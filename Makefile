@@ -7,7 +7,7 @@ all: presentation.html presentation.pdf
 		--standalone \
 		--output $@ \
 		--metadata=date:"`date "+%B %e, %Y"`" \
-		--no-highlight \
+		--syntax-highlighting=none \
 		--katex \
 		`# See reveal.js themes here: https://revealjs.com/themes/` \
 		`# Use "black" for dark mode.` \
