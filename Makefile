@@ -25,10 +25,12 @@ all: presentation.html presentation.pdf
 		-V include-after='<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/scala.min.js"></script><script>hljs.highlightAll();</script>' \
 		-V history="true" \
 		-V navigationMode="linear" \
+		-V slideNumber="true" \
+		-V controls="false" \
 		--slide-level=2 \
 		--filter pandoc-crossref \
 		--citeproc \
-		--bibliography $(word 4,$^)
+		--bibliography $(word 4,$^) \
 
 %.pdf: %.html
 	docker run --rm --volume "`pwd`:/slides" --workdir="/slides" --user `id -u`:`id -g` astefanutti/decktape \

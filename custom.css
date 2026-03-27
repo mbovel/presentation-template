@@ -125,3 +125,10 @@ code {
 .reveal .references {
     margin: 0;
 }
+
+.reveal .slide-number {
+    font-size: 3vh;
+    padding: 0.5vh 1vh;
+    right: 1.5vh;
+    bottom: 1.5vh;
+}
