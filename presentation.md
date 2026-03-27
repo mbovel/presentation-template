@@ -80,3 +80,12 @@ To see notes, press the s key, which will start a pop-up window
 If it does not work, check if your browser stopped the pop-up
 
 :::
+
+## Citation
+
+This sentence is backed by a reference [@freeman91].
+
+## References
+
+::: {#refs}
+:::

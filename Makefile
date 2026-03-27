@@ -1,6 +1,6 @@
 all: presentation.html presentation.pdf
 
-%.html: %.md Makefile custom.css
+%.html: %.md Makefile custom.css references.bib
 	docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex \
 		$< \
 		-t revealjs \
@@ -26,6 +26,9 @@ all: presentation.html presentation.pdf
 		-V history="true" \
 		-V navigationMode="linear" \
 		--slide-level=2 \
+		--filter pandoc-crossref \
+		--citeproc \
+		--bibliography $(word 4,$^)
 
 %.pdf: %.html
 	docker run --rm --volume "`pwd`:/slides" --workdir="/slides" --user `id -u`:`id -g` astefanutti/decktape \

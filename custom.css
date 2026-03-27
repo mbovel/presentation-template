@@ -74,7 +74,6 @@ code {
     background-color: var(--primary-color);
 }
 
-
 .reveal h2 {
     margin-bottom: 1em;
     font-size: 1.4em;
@@ -121,4 +120,8 @@ code {
 
 #TOC ul {
     columns: 2;
+}
+
+.reveal .references {
+    margin: 0;
 }

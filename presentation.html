@@ -32,7 +32,26 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/theme/white.css" id="theme">
   <script defer=""
   src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
@@ -129,6 +148,24 @@ section beak:</p>
 <p>To see notes, press the s key, which will start a pop-up window If it
 does not work, check if your browser stopped the pop-up</p>
 </aside>
+</section>
+<section id="citation" class="slide level2">
+<h2>Citation</h2>
+<p>This sentence is backed by a reference <span class="citation"
+data-cites="freeman91">(Freeman and Pfenning 1991)</span>.</p>
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="list">
+<div id="ref-freeman91" class="csl-entry" role="listitem">
+Freeman, Tim, and Frank Pfenning. 1991. <span>“Refinement Types for
+ML.”</span> <em>Proceedings of the ACM SIGPLAN 1991 Conference on
+Programming Language Design and Implementation</em> (New York, NY, USA),
+PLDI ’91, 268–77. <a
+href="https://doi.org/10.1145/113445.113468">https://doi.org/10.1145/113445.113468</a>.
+</div>
+</div>
 </section>
     </div>
   </div>
